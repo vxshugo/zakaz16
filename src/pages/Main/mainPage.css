@@ -1,0 +1,21 @@
+.Catalog__block {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.Catalog__block h2{
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.catalog__flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

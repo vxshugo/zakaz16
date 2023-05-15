@@ -1,0 +1,33 @@
+.practice .head {
+  background-image: url("https://industrytoday.com/wp-content/uploads/2021/01/mobile-app-development.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding-top: 170px;
+  padding-bottom: 170px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.practice .head h4 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+}
+.practice .docView {
+  display: flex;
+  justify-content: center;
+}
+.practice .docView .wrapper {
+  max-width: 1200px;
+}
+.practice .docView .wrapper .my-doc-viewer-style {
+  width: 1200px;
+}
+
+@media screen and (max-width: 768px) {
+  .practice .docView .wrapper .my-doc-viewer-style {
+    width: 100%;
+  }
+}

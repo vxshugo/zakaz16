@@ -2,30 +2,34 @@ import React, { useState } from 'react'
 import "./navbar.css"
 const Navbar = () => {
 
-    const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = () => {
-        setOpen(!open);
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
     };
 
 
     return (
-        <nav className="navbar">
-            <div className="navbar-container">
-                <a href="http://5.104.236.70/" className="navbar-logo">
-                    <img src="https://media.discordapp.net/attachments/1050812814555615282/1102700614523289620/image_5.png" alt="" />
-                </a>
-                <div className="menu-icon" onClick={handleClick}>
-                    <i className={open ? 'fas fa-times' : 'fas fa-bars'} />
-                </div>
-                <ul className={open ? 'nav-menu active' : 'nav-menu'}>
-                    <li className="nav-item">
-                        <a href="/" className="nav-link">
-                            Басты бет
-                        </a>
-                    </li>
-                </ul>
+        <nav className={`navbar ${isOpen ? "open" : ""}`}>
+            <div className="navbar-toggle" onClick={toggleNavbar}>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
             </div>
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                    <a href="#" className="nav-link">Home</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link">About</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link">Services</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link">Contact</a>
+                </li>
+            </ul>
         </nav>
     )
 }

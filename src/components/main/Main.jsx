@@ -2,7 +2,7 @@ import React from 'react'
 import './main.css'
 import background from './backgroundImage.png';
 import Lottie from "lottie-react";
-import anime from "./137392-app-animation.json";
+import anime from "./144553-building-website.json";
 
 const Main = () => {
   return (

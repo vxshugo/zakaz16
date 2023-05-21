@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Navbar from '../../components/navbar/Navbar'
-import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
+import DocViewer, {DocViewerRenderers} from "@cyntler/react-doc-viewer";
 import Footer from "../../components/Footer/Footer"
 
 
 const Test = () => {
 
     const docs = [
-        { uri: require("./экзамен.pdf") }, // Local File
+        {
+            uri: require("./экзамен.pdf"),
+            fileName: " "
+        }, // Local File
     ];
 
     const [activeDocument, setActiveDocument] = useState(docs[0]);
@@ -19,16 +22,16 @@ const Test = () => {
 
     return (
         <div className='lesson'>
-            <Navbar />
             <div className="head">
                 <h4>Емтихан сұрақтары</h4>
             </div>
             <div className="docView">
                 <div className="wrapper">
-                    <DocViewer className='my-doc-viewer-style' documents={docs} activeDocument={activeDocument} pluginRenderers={DocViewerRenderers} onDocumentChange={handleDocumentChange} />
+                    <DocViewer className='my-doc-viewer-style' documents={docs} activeDocument={activeDocument}
+                               pluginRenderers={DocViewerRenderers} onDocumentChange={handleDocumentChange}/>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }

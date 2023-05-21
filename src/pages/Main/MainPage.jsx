@@ -7,10 +7,9 @@ import "./mainPage.css"
 const MainPage = () => {
     return (
         <div>
-            <Navbar />
             <Main />
             <div className='Catalog__block'>
-                <h2>Жинақтар</h2>
+                <h2 style={{color: "#FFF"}}>Жинақтар</h2>
                 <div className='catalog__flex'>
                     <Catalog />
                 </div>
